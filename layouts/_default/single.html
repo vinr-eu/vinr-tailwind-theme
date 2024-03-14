@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="px-4 sm:px-6 md:px-8 max-w-3xl mx-auto">
+  <div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateHuman := .Date | time.Format ":date_long" }}
     <div class="text-sm leading-6 text-slate-700">
