@@ -1,28 +1,32 @@
-<nav
-  class="flex items-center justify-between p-6 lg:px-8"
-  aria-label="Global"
->
+<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
   <div class="flex lg:flex-1">
     <a href="/" class="-m-1.5 p-1.5">
       <img class="h-8 w-auto" src="/favicon.ico" alt="{{ site.Title }}" />
     </a>
   </div>
 </nav>
-{{ if .IsPage }}
-<div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
-  <h1
-    class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl"
-  >
-    {{ .Title }}
-  </h1>
-  <!-- Additional content or structure specific to single pages -->
-</div>
+{{ if .IsHome }}
+  <div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+    <h1
+      class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center"
+    >
+      {{ .Title }}
+    </h1>
+  </div>
+{{ else if .IsPage }}
+  <div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
+    <h1
+      class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl"
+    >
+      {{ .Title }}
+    </h1>
+  </div>
 {{ else }}
-<div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
-  <h1
-    class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center"
-  >
-    {{ .Title }}
-  </h1>
-</div>
+  <div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
+    <h1
+      class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl text-center"
+    >
+      {{ .Title }}
+    </h1>
+  </div>
 {{ end }}

@@ -1,9 +1,18 @@
 {{ define "main" }}
-  <div class="px-6 py-32 lg:px-8 mx-auto max-w-3xl">
+  <div class="px-6 py-1 lg:px-8 mx-auto max-w-3xl prose prose-slate">
     {{ .Content }}
-    {{ range .Pages }}
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
-    {{ end }}
+    <div class="mt-10">
+      {{ range .Pages }}
+        <div class="mt-10">
+          <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format ":date_long" }}
+          <div class="text-sm leading-6 text-slate-700 py-1">
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+          </div>
+          {{ .Summary }}
+        </div>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
