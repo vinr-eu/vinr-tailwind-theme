@@ -1,7 +1,5 @@
 {{ define "main" }}
+<div class="px-6 py-32 lg:px-8 mx-auto max-w-3xl">
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+</div>
 {{ end }}
