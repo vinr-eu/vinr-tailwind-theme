@@ -1,0 +1,9 @@
+/node_modules
+
+/.hugo_build.lock
+
+# IntelliJ
+.idea
+*.ipr
+*.iml
+*.iws
