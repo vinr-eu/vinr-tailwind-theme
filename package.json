@@ -1,7 +1,7 @@
 {
   "scripts": {
     "format": "npx prettier --write .",
-    "build": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css"
+    "build": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css && npm run format"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
