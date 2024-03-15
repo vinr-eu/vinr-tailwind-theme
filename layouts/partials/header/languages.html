@@ -1,5 +1,9 @@
+{{ $uniqueId := printf "%s-%s" (.Title | md5) (now.UnixNano | string) }}
 <div class="flex items-center gap-x-1.5">
-  <label for="language" class="text-sm font-medium leading-6 text-gray-900">
+  <label
+    for="{{ $uniqueId }}"
+    class="text-sm font-medium leading-6 text-gray-900"
+  >
     <span class="sr-only">Language</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +21,7 @@
     </svg>
   </label>
   <select
-    id="language"
+    id="{{ $uniqueId }}"
     name="language"
     autocomplete="language"
     onchange="changeLanguage(this)"

@@ -1138,6 +1138,11 @@ video {
   margin: -0.625rem;
 }
 
+.-mx-3 {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
 .-my-6 {
   margin-top: -1.5rem;
   margin-bottom: -1.5rem;
@@ -1346,6 +1351,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1359,6 +1369,11 @@ video {
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-20 {
@@ -1398,6 +1413,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1431,6 +1451,10 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
 }
 
 .tracking-tight {
@@ -1508,6 +1532,11 @@ video {
 .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   text-decoration: none;
   /* Remove underline */
+}
+
+.hover\:bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-slate-700:hover {
@@ -1631,6 +1660,11 @@ video {
 
   .lg\:justify-end {
     justify-content: flex-end;
+  }
+
+  .lg\:gap-x-12 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .lg\:px-8 {
