@@ -7,11 +7,11 @@ description = 'Tailwind theme for Hugo by vinr'
 homepage = 'https://github.com/vinr-eu/vinr-tailwind-theme'
 
 # If you have a running demo of the theme
-demosite = 'https://github.com/vinr-eu/vinr-tailwind-theme'
+demosite = 'https://vinr-eu.github.io/vinr-tailwind-theme/'
 
 # Taxonomy terms
 tags = ['blog', 'company']
-features = ['tailwind', 'responsive', 'dark mode']
+features = ['tailwind', 'responsive']
 
 # If the theme has a single author
 [author]
