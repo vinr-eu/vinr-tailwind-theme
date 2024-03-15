@@ -42,7 +42,7 @@
     {{ end }}
     {{ range .Site.Menus.main }}
       <a
-        href="{{ $newBaseURL }}{{ .URL }}"
+        href="{{ $newBaseURL }}{{ .PageRef }}"
         title="{{ .Title }}"
         class="text-sm font-semibold leading-6 text-gray-900"
       >
