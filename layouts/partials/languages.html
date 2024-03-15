@@ -42,6 +42,11 @@
     const baseURL = "{{ .Site.BaseURL }}";
     const path = window.location.pathname;
 
+    const baseURLSegments = baseURL.split('/');
+    const lastBaseURLSegment = baseURLSegments[baseURLSegments.length - 1];
+
+    alert(lastBaseURLSegment)
+
     // Remove the normalizedBaseURL part from the path to avoid interference
     const pathWithoutBase = path.replace(new RegExp("^" + baseURL), '').replace(/^\/+/, '');
 
