@@ -10,7 +10,7 @@
   <div class="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
     {{ $baseURL := .Site.BaseURL }}
     {{ $currentLang := .Site.Language.Lang }}
-    {{ $newBaseURL := strings.TrimRight $baseURL "/" }}
+    {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
     {{ if ne $currentLang "en" }}
       {{ $newBaseURL = print $baseURL $currentLang }}
     {{ end }}
