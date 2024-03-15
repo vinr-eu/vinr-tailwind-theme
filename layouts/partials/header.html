@@ -1,80 +1,18 @@
 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
   <div class="flex lg:flex-1">
     <a href="{{ .Site.BaseURL }}" class="-m-1.5 p-1.5">
-      <img class="h-8 w-auto" src="{{ .Site.BaseURL }}favicon.ico" alt="{{ site.Title }}" />
+      <img
+        class="h-8 w-auto"
+        src="{{ .Site.BaseURL }}favicon.ico"
+        alt="{{ site.Title }}"
+      />
     </a>
   </div>
 </nav>
 {{ if .IsHome }}
-  <div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 px-6">
-    <h1
-      class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center"
-    >
-      {{ .Title }}
-    </h1>
-    <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto">
-      {{ .Description }}
-    </p>
-    <div class="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-      <a
-        href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/posts/"
-        class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
-      >
-        Read Posts
-      </a>
-    </div>
-  </div>
+  {{ partial "header/home.html" . }}
 {{ else if .IsPage }}
-  <div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
-    <nav class="flex py-1" aria-label="Breadcrumb">
-      <ol role="list" class="flex items-center space-x-2">
-        <li>
-          <div class="flex items-center">
-            <a
-              href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/posts/"
-              class="text-sm font-medium text-gray-500 hover:text-gray-700"
-            >
-              Posts
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="flex items-center">
-            <svg
-              class="h-5 w-5 flex-shrink-0 text-gray-400"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <a
-              href="#"
-              class="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700"
-              aria-current="page"
-            >
-              {{ .Title }}
-            </a>
-          </div>
-        </li>
-      </ol>
-    </nav>
-    <h1
-      class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl"
-    >
-      {{ .Title }}
-    </h1>
-  </div>
+  {{ partial "header/single.html" . }}
 {{ else }}
-  <div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
-    <h1
-      class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl text-center"
-    >
-      {{ .Title }}
-    </h1>
-  </div>
+  {{ partial "header/list.html" . }}
 {{ end }}

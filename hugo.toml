@@ -2,6 +2,16 @@ baseURL = 'https://vinr.tech/'
 languageCode = 'en-us'
 title = 'vinr Home'
 
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    languageName = "English"
+    weight = 1
+  [languages.de]
+  contentDir = 'content/de'
+    languageName = "Deutsch"
+    weight = 2
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
