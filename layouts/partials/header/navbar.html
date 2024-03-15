@@ -36,7 +36,7 @@
   <div class="hidden lg:flex lg:gap-x-12">
     {{ $baseURL := .Site.BaseURL }}
     {{ $currentLang := .Site.Language.Lang }}
-    {{ $newBaseURL := strings.TrimRight $baseURL "/" }}
+    {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
     {{ if ne $currentLang "en" }}
       {{ $newBaseURL = print $baseURL $currentLang }}
     {{ end }}

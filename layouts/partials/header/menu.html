@@ -43,7 +43,7 @@
         <div class="space-y-2 py-6">
           {{ $baseURL := .Site.BaseURL }}
           {{ $currentLang := .Site.Language.Lang }}
-          {{ $newBaseURL := strings.TrimRight $baseURL "/" }}
+          {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
           {{ if ne $currentLang "en" }}
             {{ $newBaseURL = print $baseURL $currentLang }}
           {{ end }}
