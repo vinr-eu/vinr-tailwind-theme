@@ -46,10 +46,9 @@
     const lastBaseURLSegment = baseURLSegments[baseURLSegments.length - 2];
     const newPath = path.replace(new RegExp(lastBaseURLSegment + '/'), '')
       .replace(new RegExp(currentLang + '/'), '');
-    alert(newPath)
 
     // Construct the new URL
-    const newURL = baseURL + (selectedLang === 'en' ? '' : selectedLang) + newPath;
+    let newURL = baseURL + (selectedLang === 'en' ? newPath.replace(/^\//, '') : selectedLang + newPath);
 
     // Redirect only if the selected language is different from the current one
     if (selectedLang !== currentLang) {
