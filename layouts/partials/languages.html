@@ -44,23 +44,12 @@
 
     const baseURLSegments = baseURL.split('/');
     const lastBaseURLSegment = baseURLSegments[baseURLSegments.length - 2];
-
-    alert(lastBaseURLSegment)
-
-    // Remove the normalizedBaseURL part from the path to avoid interference
-    const pathWithoutBase = path.replace(new RegExp("^" + baseURL), '').replace(/^\/+/, '');
-
-    // Split the path into segments to accurately identify and remove the language code
-    let pathSegments = pathWithoutBase.split('/');
-    if (pathSegments[0] === currentLang) {
-      pathSegments.shift(); // Remove the current language code segment
-    }
-
-    // Reconstruct the basePath without the language code
-    const basePath = pathSegments.join('/');
+    const newPath = path.replace(new RegExp(lastBaseURLSegment + '/'), '')
+      .replace(new RegExp(currentLang + '/'), '');
+    alert(newPath)
 
     // Construct the new URL
-    const newURL = baseURL + (selectedLang === 'en' ? '' : selectedLang + "/") + basePath;
+    const newURL = baseURL + (selectedLang === 'en' ? '' : selectedLang + "/") + newPath;
 
     // Redirect only if the selected language is different from the current one
     if (selectedLang !== currentLang) {
