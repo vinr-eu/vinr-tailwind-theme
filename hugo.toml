@@ -2,8 +2,9 @@ baseURL = 'https://vinr.tech/'
 languageCode = 'en-us'
 title = 'vinr Home'
 
+enableRobotsTXT = true
+
 defaultContentLanguage = 'en'
-defaultContentLanguageInSubdir = true
 [languages]
   [languages.en]
     contentDir = 'content/en'
