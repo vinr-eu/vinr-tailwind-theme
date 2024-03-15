@@ -1,6 +1,6 @@
 +++
 title = 'Event Driven Architecture'
-date = 2023-02-15T10:00:00-07:00
+date = 2024-02-15T10:00:00-07:00
 draft = false
 tags = ['red','green']
 description = "Event Driven Architecture blog."
