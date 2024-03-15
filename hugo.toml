@@ -15,6 +15,7 @@ defaultContentLanguage = 'en'
     languageName = "Deutsch"
     weight = 2
 
+[menus]
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
@@ -29,6 +30,16 @@ weight = 20
 name = 'Tags'
 pageRef = '/tags'
 weight = 30
+
+[[menus.footer]]
+name = 'Terms'
+pageRef = '/terms'
+weight = 10
+
+[[menus.footer]]
+name = 'Privacy'
+pageRef = '/privacy'
+weight = 20
 
 [module]
   [module.hugoVersion]
