@@ -27,8 +27,8 @@ pageRef = '/posts'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Docs'
+pageRef = '/docs'
 weight = 30
 
 [[menus.footer]]
