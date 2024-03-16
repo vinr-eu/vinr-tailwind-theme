@@ -1,0 +1,12 @@
+<div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  <div class="text-sm leading-6 text-slate-700">
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  </div>
+
+  <div class="mt-12 prose prose-slate">
+    {{ .Content }}
+  </div>
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</div>
