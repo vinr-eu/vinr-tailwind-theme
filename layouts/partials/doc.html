@@ -1,23 +1,10 @@
 <div
-  class="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8"
+  class="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-6 py-4 md:px-12"
 >
   <aside class="sticky top-8 hidden w-44 shrink-0 lg:block">Menu</aside>
   <div class="flex-1">
-    <div class="px-6 pt-4 md:px-12 mx-auto">
-      <header>
-        <h1
-          class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl"
-        >
-          {{ .Title }}
-        </h1>
-      </header>
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
-      <div class="text-sm leading-6 text-slate-700">
-        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-      </div>
-
-      <div class="mt-12 prose prose-slate max-w-screen-md">
+    <div class="mx-auto">
+      <div class="prose prose-slate max-w-screen-md">
         {{ .Content }}
       </div>
     </div>
