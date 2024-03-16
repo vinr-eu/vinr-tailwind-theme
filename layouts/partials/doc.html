@@ -1,7 +1,25 @@
 <div
   class="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-6 py-4 md:px-12"
 >
-  <aside class="sticky top-8 hidden w-44 shrink-0 lg:block">Menu</aside>
+  <aside class="sticky top-8 hidden w-44 shrink-0 lg:block">
+    {{ with .Parent }}
+      <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900">
+        {{ .Title }}
+      </h5>
+      <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+        {{ range .Pages }}
+          <li data-active="true">
+            <a
+              href="{{ .RelPermalink }}"
+              class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 text-slate-700 hover:text-slate-900 truncate"
+            >
+              {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </aside>
   <div class="flex-1">
     <div class="mx-auto">
       <div class="prose prose-slate max-w-screen-md">
