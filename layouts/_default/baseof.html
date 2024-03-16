@@ -7,12 +7,17 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    <header>
-      {{ partial "header.html" . }}
-    </header>
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
+    {{ if eq .Type "docs" }}
+      {{ partial "header/navbar.html" . }}
+      {{ partial "doc.html" . }}
+    {{ else }}
+      <header>
+        {{ partial "header.html" . }}
+      </header>
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    {{ end }}
     <footer>
       {{ partial "footer.html" . }}
     </footer>

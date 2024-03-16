@@ -4,8 +4,6 @@
 {{ else if .IsPage }}
   {{ if eq .Type "posts" }}
     {{ partial "header/post.html" . }}
-  {{ else if eq .Type "docs" }}
-    {{ partial "header/doc.html" . }}
   {{ else }}
     {{ partial "header/single.html" . }}
   {{ end }}
