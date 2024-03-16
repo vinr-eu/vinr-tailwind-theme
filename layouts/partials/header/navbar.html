@@ -33,25 +33,29 @@
       </svg>
     </button>
   </div>
-  <div class="hidden lg:flex lg:gap-x-12">
-    {{ $baseURL := .Site.BaseURL }}
-    {{ $currentLang := .Site.Language.Lang }}
-    {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
-    {{ if ne $currentLang "en" }}
-      {{ $newBaseURL = print $baseURL $currentLang }}
-    {{ end }}
-    {{ range .Site.Menus.main }}
-      <a
-        href="{{ $newBaseURL }}{{ .PageRef }}"
-        title="{{ .Title }}"
-        class="text-sm font-semibold leading-6 text-gray-900"
-      >
-        {{ .Name }}
-      </a>
-    {{ end }}
-  </div>
-  <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-    {{ partial "header/languages.html" . }}
+  <div class="relative hidden lg:flex items-center ml-auto">
+    <div class="hidden lg:flex lg:gap-x-8">
+      {{ $baseURL := .Site.BaseURL }}
+      {{ $currentLang := .Site.Language.Lang }}
+      {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
+      {{ if ne $currentLang "en" }}
+        {{ $newBaseURL = print $baseURL $currentLang }}
+      {{ end }}
+      {{ range .Site.Menus.main }}
+        <a
+          href="{{ $newBaseURL }}{{ .PageRef }}"
+          title="{{ .Title }}"
+          class="text-sm font-semibold leading-6 text-gray-900"
+        >
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </div>
+    <div
+      class="hidden lg:flex lg:flex-1 lg:justify-end border-l border-slate-200 ml-6 pl-6"
+    >
+      {{ partial "header/languages.html" . }}
+    </div>
   </div>
 </nav>
 {{ partial "header/menu.html" . }}
