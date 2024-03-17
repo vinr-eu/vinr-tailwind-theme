@@ -2,6 +2,9 @@ baseURL = 'https://vinr.tech/'
 languageCode = 'en-us'
 title = 'vinr Home'
 
+[params]
+primaryColorScheme = "indigo"
+
 enableRobotsTXT = true
 
 defaultContentLanguage = 'en'
