@@ -12,9 +12,9 @@ function generateSafelist() {
   const colors = ["indigo", "purple", "red", "sky"];
 
   const templates = [
-    { utility: "bg", shade: "500" },
-    { utility: "hover:bg", shade: "400" },
-    { utility: "focus:ring", shade: "400" },
+    { utility: "bg", shade: "600" },
+    { utility: "hover:bg", shade: "500" },
+    { utility: "focus:ring", shade: "500" },
     { utility: "focus:ring-offset", shade: "50" },
   ];
 
