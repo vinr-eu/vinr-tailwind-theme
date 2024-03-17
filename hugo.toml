@@ -2,9 +2,6 @@ baseURL = 'https://vinr.tech/'
 languageCode = 'en-us'
 title = 'vinr Home'
 
-[params]
-primaryColorScheme = "indigo"
-
 enableRobotsTXT = true
 
 defaultContentLanguage = 'en'
@@ -17,6 +14,16 @@ defaultContentLanguage = 'en'
   contentDir = 'content/de'
     languageName = "Deutsch"
     weight = 2
+
+[params]
+  primaryColorScheme = "indigo"
+
+[params.social]
+  facebook = "https://facebook.com/yourprofile"
+  instagram = "https://instagram.com/yourprofile"
+  twitter = "https://twitter.com/yourprofile"
+  github = "https://github.com/yourprofile"
+  youtube = "https://youtube.com/yourchannel"
 
 [menus]
 [[menus.main]]
