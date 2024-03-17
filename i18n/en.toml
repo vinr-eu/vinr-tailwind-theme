@@ -1,2 +1,4 @@
 blog = 'Blog'
 docs = 'Docs'
+cookieMessage = 'We use cookies to measure and improve your experience.'
+viewDetails = 'View details'

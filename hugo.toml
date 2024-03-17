@@ -52,8 +52,8 @@ pageRef = '/terms'
 weight = 10
 
 [[menus.footer]]
-name = 'Privacy'
-pageRef = '/privacy'
+name = 'Privacy policy'
+pageRef = '/privacy-policy'
 weight = 20
 
 [module]
