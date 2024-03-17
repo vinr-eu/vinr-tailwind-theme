@@ -32,14 +32,19 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
+name = 'About us'
+pageRef = '/about'
+weight = 20
+
+[[menus.main]]
 name = 'Blog'
 pageRef = '/blog'
-weight = 20
+weight = 30
 
 [[menus.main]]
 name = 'Docs'
 pageRef = '/docs'
-weight = 30
+weight = 40
 
 [[menus.footer]]
 name = 'Terms'

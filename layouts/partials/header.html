@@ -1,5 +1,5 @@
 {{ partial "header/navbar.html" . }}
-{{ if .IsHome }}
+{{ if or .IsHome (eq .Type "about") }}
   {{ partial "header/home.html" . }}
 {{ else if .IsPage }}
   {{ if eq .Type "blog" }}
