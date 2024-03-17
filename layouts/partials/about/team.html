@@ -18,7 +18,7 @@
         <li class="flex flex-col gap-10 pt-12 sm:flex-row">
           <img
             class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-            src="{{ .image }}"
+            src="{{ .Site.BaseURL }}{{ .image }}"
             alt="{{ .name }}"
           />
           <div class="max-w-xl flex-auto">
