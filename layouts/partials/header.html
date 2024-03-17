@@ -1,6 +1,6 @@
 {{ partial "header/navbar.html" . }}
 {{ if or .IsHome (eq .Type "about") }}
-  {{ partial "header/home.html" . }}
+  {{ partial "header/hero.html" . }}
 {{ else if .IsPage }}
   {{ if eq .Type "blog" }}
     {{ partial "header/post.html" . }}
