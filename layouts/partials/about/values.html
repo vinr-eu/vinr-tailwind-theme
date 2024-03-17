@@ -5,9 +5,25 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
       <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-        Values
+        {{ .Params.valuesHeading }}
       </h2>
-      <p class="mt-6 text-lg leading-8 text-gray-300">Our values are great.</p>
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        {{ .Params.valuesSubheading }}
+      </p>
+    </div>
+    <div
+      class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
+    >
+      {{ range .Params.values }}
+        <div
+          class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10"
+        >
+          <div class="text-base leading-7">
+            <h3 class="font-semibold text-white">{{ .title }}</h3>
+            <p class="mt-2 text-gray-300">{{ .description }}</p>
+          </div>
+        </div>
+      {{ end }}
     </div>
   </div>
 </section>
