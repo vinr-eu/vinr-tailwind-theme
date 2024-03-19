@@ -1,43 +1,56 @@
-<div class="relative max-w-5xl mx-auto py-20 sm:py-24 lg:py-32 px-6">
-  <h1
-    class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center"
-  >
-    {{ .Params.heroHeading }}
-  </h1>
-  <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto">
-    {{ .Params.heroSubheading }}
-  </p>
-  <div class="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-    {{ $baseURL := .Site.BaseURL }}
-    {{ $currentLang := .Site.Language.Lang }}
-    {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
-    {{ if ne $currentLang "en" }}
-      {{ $newBaseURL = print $baseURL $currentLang }}
-    {{ end }}
-    {{ $newCtaURL := .Params.cta }}
-    {{ with .Params.cta }}
-      {{ if strings.HasPrefix . "/" }}
-        {{ $newCtaURL = print $newBaseURL . }}
+<div class="relative max-w-7xl mx-auto py-20 sm:py-24 lg:py-32 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h1
+      class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center"
+    >
+      {{ .Params.heroHeading }}
+    </h1>
+    <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto">
+      {{ .Params.heroSubheading }}
+    </p>
+    <div class="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
+      {{ $baseURL := .Site.BaseURL }}
+      {{ $currentLang := .Site.Language.Lang }}
+      {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
+      {{ if ne $currentLang "en" }}
+        {{ $newBaseURL = print $baseURL $currentLang }}
       {{ end }}
-    {{ end }}
-    <a
-      href="{{ $newCtaURL }}"
-      class="bg-{{ .Site.Params.primaryColorScheme }}-600 hover:bg-{{ .Site.Params.primaryColorScheme }}-500 focus:outline-none focus:ring-2 focus:ring-{{ .Site.Params.primaryColorScheme }}-500 focus:ring-offset-2 focus:ring-offset-{{ .Site.Params.primaryColorScheme }}-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
-    >
-      {{ .Params.ctaText }}
-    </a>
+      {{ $newCtaURL := .Params.cta }}
+      {{ with .Params.cta }}
+        {{ if strings.HasPrefix . "/" }}
+          {{ $newCtaURL = print $newBaseURL . }}
+        {{ end }}
+      {{ end }}
+      <a
+        href="{{ $newCtaURL }}"
+        class="bg-{{ .Site.Params.primaryColorScheme }}-600 hover:bg-{{ .Site.Params.primaryColorScheme }}-500 focus:outline-none focus:ring-2 focus:ring-{{ .Site.Params.primaryColorScheme }}-500 focus:ring-offset-2 focus:ring-offset-{{ .Site.Params.primaryColorScheme }}-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
+      >
+        {{ .Params.ctaText }}
+      </a>
+    </div>
   </div>
-  <div class="mt-16 flow-root sm:mt-24">
+  <div class="mt-16 mx-auto sm:mt-24">
     <div
-      class="rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl lg:p-4"
+      class="mx-auto rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl lg:p-4"
     >
-      <img
-        src="{{ $baseURL }}{{ .Params.image }}"
-        alt="Hero image"
-        width="1440"
-        height="800"
-        class="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-      />
+      {{ with .Params.image }}
+        <img
+          src="{{ $baseURL }}{{ . }}"
+          alt="Hero image"
+          class="w-full h-full rounded-md shadow-2xl ring-1 ring-gray-900/10"
+        />
+      {{ end }}
+      {{ with .Params.youtube }}
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe
+            class="w-full h-full rounded-md"
+            src="{{ . }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      {{ end }}
     </div>
   </div>
 </div>
