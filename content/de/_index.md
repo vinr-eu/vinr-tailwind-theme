@@ -7,4 +7,5 @@ heroHeading = "Machen Sie Ihr Ding. Für alles andere haben wir eine Lösung."
 heroSubheading = "Verwalten Sie Ihre Ressourcen, Vermögenswerte und Finanzen mit unseren mühelosen Unternehmenstools. Optimieren Sie die Effizienz Ihres Unternehmens in allen Geschäftsbereichen. Sparen Sie Zeit und Geld."
 cta = "/register/"
 ctaText = "Registrieren"
+image = "/images/solutions/animated.webp"
 +++

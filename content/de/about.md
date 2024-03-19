@@ -8,6 +8,7 @@ heroHeading = "Wir haben es uns zur Aufgabe gemacht, Unternehmen mit SaaS-Lösun
 heroSubheading = "Unsere Mission ist es, Abläufe zu rationalisieren und Gemeinkosten zu reduzieren, damit sich aufstrebende Unternehmen auf das konzentrieren können, was sie am besten können."
 cta = "https://calendly.com/richy-vinr/vinr-products-services"
 ctaText = "Contact us"
+image = "/images/team/berlin.webp"
 valuesHeading = "Unsere Werte"
 valuesSubheading = "Gegründet am 20. Juni 2023 im pulsierenden Herzen von Berlin, Deutschland, fiel unsere Gründung in eine Zeit der globalen wirtschaftlichen Herausforderungen. Dennoch haben wir uns, inspiriert von der Widerstandsfähigkeit von Kakerlaken-Startups, für diesen Weg entschieden. Als Technologieunternehmen, das sich auf Software spezialisiert hat, sind unsere Produkte auf Wirtschaftlichkeit und Skalierbarkeit ausgelegt, so dass sie mühelos eine breite Benutzerbasis ansprechen. Auf der Grundlage unserer fundierten Forschung und umfangreichen Berufserfahrung bieten wir unseren Kunden kontinuierlich eine Vielzahl integrierter Lösungen zu erschwinglichen Preisen."
 teamHeading = "Lernen Sie unsere Führung kennen"
