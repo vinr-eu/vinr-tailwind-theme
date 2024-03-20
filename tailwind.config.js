@@ -17,6 +17,7 @@ function generateSafelist() {
   const templates = [
     { utility: "bg", shade: "600" },
     { utility: "hover:bg", shade: "500" },
+    { utility: "text", shade: "500" },
     { utility: "focus:ring", shade: "500" },
     { utility: "focus:ring-offset", shade: "50" },
   ];
