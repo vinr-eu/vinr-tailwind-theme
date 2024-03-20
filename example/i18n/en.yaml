@@ -1,0 +1,17 @@
+# Cookie banner
+cookieMessage: "We use cookies to measure and improve your experience."
+viewDetails: "View details"
+# Main menus
+home: "Home"
+aboutUs: "About us"
+blog: "Blog"
+docs: "Docs"
+# Footer menus
+superFeature: "Super feature"
+terms: "Terms"
+privacyPolicy: "Privacy policy"
+# CTA
+cta:
+  heading: "Enterprise Management Suite from vinr, Try for FREE!"
+  subheading: "Our Enterprise Management Suite contains HR management, Application tracking system, Financial management and IT Asset management."
+  text: "Register"

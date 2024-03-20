@@ -47,7 +47,7 @@
           title="{{ .Title }}"
           class="text-sm font-semibold leading-6 text-gray-900"
         >
-          {{ .Name }}
+          {{ or (T .Identifier) .Name | safeHTML }}
         </a>
       {{ end }}
     </div>

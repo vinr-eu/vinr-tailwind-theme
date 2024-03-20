@@ -3,17 +3,17 @@
     <div class="mx-auto max-w-2xl text-center">
       {{ if or .IsHome (eq .Type "about") (eq .Type "landing") }}
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          {{ i18n "ctaHeading" . }}
+          {{ i18n "cta.heading" . }}
         </h2>
         <p class="mx-auto mt-6 mb-10 text-lg leading-8 text-gray-600">
-          {{ i18n "ctaSubheading" . }}
+          {{ i18n "cta.subheading" . }}
         </p>
       {{ else }}
         <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-          {{ i18n "ctaHeading" . }}
+          {{ i18n "cta.heading" . }}
         </h2>
         <p class="mt-3 mb-5 leading-8 text-gray-600">
-          {{ i18n "ctaSubheading" . }}
+          {{ i18n "cta.subheading" . }}
         </p>
       {{ end }}
       <div class="flex items-center justify-center gap-x-6">
@@ -33,7 +33,7 @@
           href="{{ $newCtaURL }}"
           class="bg-{{ .Site.Params.primaryColorScheme }}-600 hover:bg-{{ .Site.Params.primaryColorScheme }}-500 focus:outline-none focus:ring-2 focus:ring-{{ .Site.Params.primaryColorScheme }}-500 focus:ring-offset-2 focus:ring-offset-{{ .Site.Params.primaryColorScheme }}-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
         >
-          {{ i18n "ctaText" . }}
+          {{ i18n "cta.text" . }}
         </a>
       </div>
     </div>

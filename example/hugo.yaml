@@ -1,0 +1,56 @@
+baseURL: "https://vinr.tech/"
+languageCode: "en-us"
+title: "vinr"
+theme: "vinr-tailwind-theme"
+themesDir: "../.."
+enableRobotsTXT: true
+defaultContentLanguage: "en"
+languages:
+  en:
+    contentDir: "content/en"
+    languageName: "English"
+    weight: 1
+  de:
+    contentDir: "content/de"
+    languageName: "Deutsch"
+    weight: 2
+params:
+  primaryColorScheme: "indigo"
+  cta: "/register/"
+  social:
+    facebook: "https://facebook.com/yourprofile"
+    instagram: "https://instagram.com/yourprofile"
+    twitter: "https://twitter.com/yourprofile"
+    github: "https://github.com/yourprofile"
+    youtube: "https://youtube.com/yourchannel"
+menus:
+  main:
+    - identifier: "home"
+      name: "Home"
+      pageRef: "/"
+      weight: 10
+    - identifier: "aboutUs"
+      name: "About us"
+      pageRef: "/about"
+      weight: 20
+    - identifier: "blog"
+      name: "Blog"
+      pageRef: "/blog"
+      weight: 30
+    - identifier: "docs"
+      name: "Docs"
+      pageRef: "/docs"
+      weight: 40
+  footer:
+    - identifier: "superFeature"
+      name: "Super feature"
+      pageRef: "/landing/super-feature"
+      weight: 10
+    - identifier: "terms"
+      name: "Terms"
+      pageRef: "/terms"
+      weight: 20
+    - identifier: "privacyPolicy"
+      name: "Privacy policy"
+      pageRef: "/privacy-policy"
+      weight: 30
