@@ -25,22 +25,26 @@ params:
     youtube: "https://youtube.com/yourchannel"
 menus:
   main:
-    - identifier: "home"
-      name: "Home"
+    - identifier: "solutions"
+      name: "Solutions"
       pageRef: "/"
       weight: 10
+    - identifier: "pricing"
+      name: "Pricing"
+      pageRef: "/#pricing"
+      weight: 20
     - identifier: "aboutUs"
       name: "About us"
       pageRef: "/about"
-      weight: 20
+      weight: 30
     - identifier: "blog"
       name: "Blog"
       pageRef: "/blog"
-      weight: 30
+      weight: 40
     - identifier: "docs"
       name: "Docs"
       pageRef: "/docs"
-      weight: 40
+      weight: 50
   footer:
     - identifier: "superFeature"
       name: "Super feature"
