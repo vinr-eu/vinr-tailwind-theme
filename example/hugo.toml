@@ -49,11 +49,16 @@ pageRef = '/docs'
 weight = 40
 
 [[menus.footer]]
+name = 'Super feature'
+pageRef = '/landing/super-feature'
+weight = 10
+
+[[menus.footer]]
 name = 'Terms'
 pageRef = '/terms'
-weight = 10
+weight = 20
 
 [[menus.footer]]
 name = 'Privacy policy'
 pageRef = '/privacy-policy'
-weight = 20
+weight = 30
