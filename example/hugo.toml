@@ -19,6 +19,7 @@ weight = 2
 
 [params]
 primaryColorScheme = "indigo"
+cta = "/register/"
 
 [params.social]
 facebook = "https://facebook.com/yourprofile"
