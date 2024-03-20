@@ -2,6 +2,7 @@
   {{ if eq .Type "docs" }}
     {{ partial "doc.html" . }}
   {{ else if eq .Type "landing" }}
+    {{ partial "faq.html" . }}
   {{ else if eq .Type "about" }}
     {{ partial "about.html" . }}
   {{ else }}
