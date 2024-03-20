@@ -3,6 +3,7 @@ cookieMessage: "We use cookies to measure and improve your experience."
 viewDetails: "View details"
 # Main menus
 solutions: "Solutions"
+pricing: "Pricing"
 aboutUs: "About us"
 blog: "Blog"
 docs: "Docs"
@@ -15,3 +16,5 @@ cta:
   heading: "Enterprise Management Suite from vinr, Try for FREE!"
   subheading: "Our Enterprise Management Suite contains HR management, Application tracking system, Financial management and IT Asset management."
   text: "Register"
+# Common
+features: "Features"
