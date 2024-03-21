@@ -17,6 +17,8 @@ languages:
 params:
   primaryColorScheme: "indigo"
   cta: "/register/"
+  images:
+    - logo.svg
   social:
     facebook: "https://facebook.com/yourprofile"
     instagram: "https://instagram.com/yourprofile"

@@ -8,10 +8,10 @@
           <h1
             class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
           >
-            {{ .Params.heroHeading }}
+            {{ .Params.hero.heading }}
           </h1>
           <p class="mt-6 text-lg leading-8 text-gray-600">
-            {{ .Params.heroSubheading }}
+            {{ .Params.hero.subheading }}
           </p>
           <div class="mt-8 flex">
             {{ $baseURL := .Site.BaseURL }}
@@ -20,8 +20,8 @@
             {{ if ne $currentLang "en" }}
               {{ $newBaseURL = print $baseURL $currentLang }}
             {{ end }}
-            {{ $newCtaURL := .Params.cta }}
-            {{ with .Params.cta }}
+            {{ $newCtaURL := .Params.hero.cta }}
+            {{ with .Params.hero.cta }}
               {{ if strings.HasPrefix . "/" }}
                 {{ $newCtaURL = print $newBaseURL . }}
               {{ end }}
@@ -30,12 +30,12 @@
               href="{{ $newCtaURL }}"
               class="bg-{{ .Site.Params.primaryColorScheme }}-600 hover:bg-{{ .Site.Params.primaryColorScheme }}-500 focus:outline-none focus:ring-2 focus:ring-{{ .Site.Params.primaryColorScheme }}-500 focus:ring-offset-2 focus:ring-offset-{{ .Site.Params.primaryColorScheme }}-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
             >
-              {{ .Params.ctaText }}
+              {{ .Params.hero.ctaText }}
             </a>
           </div>
         </div>
       </div>
-      {{ with .Params.image }}
+      {{ with .Params.hero.image }}
         <img
           src="{{ $baseURL }}{{ . }}"
           alt="Feature"
