@@ -4,16 +4,16 @@
     class="mx-auto max-w-7xl px-6 py-24 sm:pt-32 lg:px-8 lg:py-40"
   >
     <div class="mx-auto max-w-4xl sm:text-center">
-      <p
+      <h2
         class="text-base font-semibold leading-7 text-{{ .Site.Params.primaryColorScheme }}-600"
       >
         {{ i18n "pricing" . }}
-      </p>
-      <h2
+      </h2>
+      <p
         class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
       >
         {{ .Params.pricingHeading }}
-      </h2>
+      </p>
     </div>
     <p
       class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 sm:text-center"
@@ -36,6 +36,7 @@
             {{ $newCtaURL = print $newBaseURL . }}
           {{ end }}
         {{ end }}
+        {{ $primaryColorScheme := .Site.Params.primaryColorScheme }}
         {{ range .Params.plans }}
           <div class="pt-16 lg:px-8 lg:pt-0 xl:px-14">
             <h3
@@ -69,7 +70,7 @@
               {{ range .features }}
                 <li class="flex gap-x-3">
                   <svg
-                    class="h-6 w-5 flex-none text-{{ .Site.Params.primaryColorScheme }}-600"
+                    class="h-6 w-5 flex-none text-{{ $primaryColorScheme }}-600"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"

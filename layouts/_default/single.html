@@ -4,7 +4,8 @@
   {{ else if eq .Type "landing" }}
     {{ partial "faq.html" . }}
   {{ else if eq .Type "about" }}
-    {{ partial "about.html" . }}
+    {{ partial "about/values.html" . }}
+    {{ partial "about/team.html" . }}
   {{ else }}
     {{ partial "article.html" . }}
   {{ end }}
