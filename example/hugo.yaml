@@ -1,6 +1,6 @@
 baseURL: "https://vinr.tech/"
 languageCode: "en-us"
-title: "vinr"
+title: "vinr enterprise solutions"
 theme: "vinr-tailwind-theme"
 themesDir: "../.."
 enableRobotsTXT: true
