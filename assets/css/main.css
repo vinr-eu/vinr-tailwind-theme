@@ -2191,6 +2191,18 @@ video {
   outline-color: #4f46e5;
 }
 
+.focus-visible\:outline-purple-600:focus-visible {
+  outline-color: #9333ea;
+}
+
+.focus-visible\:outline-red-600:focus-visible {
+  outline-color: #dc2626;
+}
+
+.focus-visible\:outline-sky-600:focus-visible {
+  outline-color: #0284c7;
+}
+
 @media (min-width: 640px) {
   .sm\:mx-auto {
     margin-left: auto;

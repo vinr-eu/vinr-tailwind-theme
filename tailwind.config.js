@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
   content: ["./layouts/**/*.html"],
   safelist: generateSafelist(["bg", "ring", "ring-offset"]),
@@ -21,6 +21,7 @@ function generateSafelist() {
     { utility: "text", shade: "600" },
     { utility: "focus:ring", shade: "500" },
     { utility: "focus:ring-offset", shade: "50" },
+    { utility: "focus-visible:outline", shade: "600" },
   ];
 
   let safelist = [];
