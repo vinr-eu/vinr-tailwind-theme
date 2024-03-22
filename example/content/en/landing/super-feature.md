@@ -9,6 +9,18 @@ hero:
   image: "/images/solutions/animated.webp"
   cta: "/register/"
   ctaText: "Register"
+features:
+  heading: "Some of the other features"
+  subheading: "We have a lot more."
+  image: "/images/solutions/animated.webp"
+  right: true
+  items:
+    - title: "HR management"
+      description: "You can manage your people and their time offs."
+    - title: "Financial management"
+      description: "You can manage your budget, expenses and supplier invoices."
+    - title: "Asset management"
+      description: "IT assets can be tough to manage, so let's manage it."
 faq:
   heading: "Frequently asked questions"
   subheading: "Can’t find the answer you’re looking for? Reach out to our customer support team."

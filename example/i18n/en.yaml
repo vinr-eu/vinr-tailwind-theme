@@ -9,9 +9,8 @@ superFeature: "Super feature"
 terms: "Terms"
 privacyPolicy: "Privacy policy"
 # CTA
-cta:
-  heading: "Enterprise Management Suite from vinr, Try for FREE!"
-  subheading: "Our Enterprise Management Suite contains HR management, Application tracking system, Financial management and IT Asset management."
-  text: "Register"
+ctaHeading: "Enterprise Management Suite from vinr, Try for FREE!"
+ctaSubheading: "Our Enterprise Management Suite contains HR management, Application tracking system, Financial management and IT Asset management."
+ctaText: "Register"
 # Common
 features: "Features"
