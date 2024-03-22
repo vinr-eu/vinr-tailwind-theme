@@ -15,7 +15,7 @@ languages:
     languageName: "Deutsch"
     weight: 2
 params:
-  primaryColorScheme: "indigo"
+  primaryColorScheme: "red"
   cta: "/register/"
   images:
     - logo-square.png

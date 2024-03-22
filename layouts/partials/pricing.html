@@ -30,14 +30,14 @@
         {{ if ne $currentLang "en" }}
           {{ $newBaseURL = print $baseURL $currentLang }}
         {{ end }}
-        {{ $newCtaURL := .Params.cta }}
-        {{ with .Params.cta }}
-          {{ if strings.HasPrefix . "/" }}
-            {{ $newCtaURL = print $newBaseURL . }}
-          {{ end }}
-        {{ end }}
         {{ $primaryColorScheme := .Site.Params.primaryColorScheme }}
-        {{ range .Params.plans }}
+        {{ range .Params.pricing.items }}
+          {{ $newCtaURL := .cta }}
+          {{ with .cta }}
+            {{ if strings.HasPrefix . "/" }}
+              {{ $newCtaURL = print $newBaseURL . }}
+            {{ end }}
+          {{ end }}
           <div class="pt-16 lg:px-8 lg:pt-0 xl:px-14">
             <h3
               id="tier-basic"
@@ -58,7 +58,7 @@
               aria-describedby="tier-basic"
               class="mt-10 block rounded-md bg-{{ $primaryColorScheme }}-600 px-3 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-{{ $primaryColorScheme }}-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-{{ $primaryColorScheme }}-600"
             >
-              {{ i18n "cta.text" . }}
+              {{ .ctaText }}
             </a>
             <p class="mt-10 text-sm font-semibold leading-6 text-gray-900">
               {{ .description }}
