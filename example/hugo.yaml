@@ -18,7 +18,7 @@ params:
   primaryColorScheme: "indigo"
   cta: "/register/"
   images:
-    - logo.svg
+    - logo-square.png
   social:
     facebook: "https://facebook.com/yourprofile"
     instagram: "https://instagram.com/yourprofile"
