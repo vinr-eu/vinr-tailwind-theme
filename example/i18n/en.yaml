@@ -12,5 +12,39 @@ privacyPolicy: "Privacy policy"
 ctaHeading: "Enterprise Management Suite from vinr, Try for FREE!"
 ctaSubheading: "Our Enterprise Management Suite contains HR management, Application tracking system, Financial management and IT Asset management."
 ctaText: "Register"
+# Register
+registerHeading: Get started for free
+registerSubheading: Instant access, No credit card needed.
+businessNameLabel: Business name
+countryLabel: Country
+firstNameLabel: First name
+lastNameLabel: Last name
+emailAddressLabel: Email address
+passwordForVinrLabel: Password for vinr
+signUpButton: Sign up
+agreementText: By registering, you agree to our
+termsLinkText: terms
+privacyPolicyLinkText: privacy policy and cookie policy
+successMessage: Successfully registered. Redirecting to Log in...
+austria: Austria
+belgium: Belgium
+croatia: Croatia
+cyprus: Cyprus
+estonia: Estonia
+finland: Finland
+france: France
+germany: Germany
+greece: Greece
+ireland: Ireland
+italy: Italy
+latvia: Latvia
+lithuania: Lithuania
+luxembourg: Luxembourg
+malta: Malta
+netherlands: Netherlands
+portugal: Portugal
+slovakia: Slovakia
+slovenia: Slovenia
+spain: Spain
 # Common
 features: "Features"

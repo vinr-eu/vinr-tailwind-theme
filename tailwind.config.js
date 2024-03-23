@@ -21,6 +21,7 @@ function generateSafelist() {
     { utility: "text", shade: "500" },
     { utility: "text", shade: "600" },
     { utility: "focus:ring", shade: "500" },
+    { utility: "focus:ring", shade: "600" },
     { utility: "focus:ring-offset", shade: "50" },
     { utility: "focus-visible:outline", shade: "600" },
   ];

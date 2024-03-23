@@ -7,6 +7,8 @@
   {{ else if eq .Type "about" }}
     {{ partial "about/values.html" . }}
     {{ partial "about/team.html" . }}
+  {{ else if eq .Type "register" }}
+    {{ partial "register/form.html" . }}
   {{ else }}
     {{ partial "article.html" . }}
   {{ end }}
