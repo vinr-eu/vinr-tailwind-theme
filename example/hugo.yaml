@@ -16,6 +16,7 @@ languages:
     weight: 2
 params:
   primaryColorScheme: "indigo"
+  pricingCurrency: "US$"
   cta: "/register/"
   images:
     - logo-square.png
