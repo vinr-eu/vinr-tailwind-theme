@@ -92,26 +92,11 @@
           autocomplete="country-name"
           class="h-10 block w-full rounded-md border-0 bg-white px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-{{ $primaryColorScheme }}-600 sm:text-sm sm:leading-6"
         >
-          <option value="AT">{{ i18n "austria" }}</option>
-          <option value="BE">{{ i18n "belgium" }}</option>
-          <option value="HR">{{ i18n "croatia" }}</option>
-          <option value="CY">{{ i18n "cyprus" }}</option>
-          <option value="EE">{{ i18n "estonia" }}</option>
-          <option value="FI">{{ i18n "finland" }}</option>
-          <option value="FR">{{ i18n "france" }}</option>
-          <option value="DE" selected>{{ i18n "germany" }}</option>
-          <option value="GR">{{ i18n "greece" }}</option>
-          <option value="IE">{{ i18n "ireland" }}</option>
-          <option value="IT">{{ i18n "italy" }}</option>
-          <option value="LV">{{ i18n "latvia" }}</option>
-          <option value="LT">{{ i18n "lithuania" }}</option>
-          <option value="LU">{{ i18n "luxembourg" }}</option>
-          <option value="MT">{{ i18n "malta" }}</option>
-          <option value="NL">{{ i18n "netherlands" }}</option>
-          <option value="PT">{{ i18n "portugal" }}</option>
-          <option value="SK">{{ i18n "slovakia" }}</option>
-          <option value="SI">{{ i18n "slovenia" }}</option>
-          <option value="ES">{{ i18n "spain" }}</option>
+          {{ range .Site.Params.countries }}
+            <option value="{{ .identifier | upper }}">
+              {{ or (T .identifier) .name | safeHTML }}
+            </option>
+          {{ end }}
         </select>
       </div>
     </div>

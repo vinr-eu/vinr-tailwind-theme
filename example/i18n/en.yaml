@@ -26,25 +26,31 @@ agreementText: By registering, you agree to our
 termsLinkText: terms
 privacyPolicyLinkText: privacy policy and cookie policy
 successMessage: Successfully registered. Redirecting to Log in...
-austria: Austria
-belgium: Belgium
-croatia: Croatia
-cyprus: Cyprus
-estonia: Estonia
-finland: Finland
-france: France
-germany: Germany
-greece: Greece
-ireland: Ireland
-italy: Italy
-latvia: Latvia
-lithuania: Lithuania
-luxembourg: Luxembourg
-malta: Malta
-netherlands: Netherlands
-portugal: Portugal
-slovakia: Slovakia
-slovenia: Slovenia
-spain: Spain
+# EU countries
+at: Austria
+be: Belgium
+hr: Croatia
+cy: Cyprus
+ee: Estonia
+fi: Finland
+fr: France
+de: Germany
+gr: Greece
+ie: Ireland
+it: Italy
+lv: Latvia
+lt: Lithuania
+lu: Luxembourg
+mt: Malta
+nl: Netherlands
+pt: Portugal
+sk: Slovakia
+si: Slovenia
+es: Spain
+# Tech countries
+ca: Canada
+in: India
+us: United States of America
+gb: United Kingdom
 # Common
 features: "Features"

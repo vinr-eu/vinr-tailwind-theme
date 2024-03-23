@@ -26,6 +26,9 @@ params:
     twitter: "https://twitter.com/yourprofile"
     github: "https://github.com/yourprofile"
     youtube: "https://youtube.com/yourchannel"
+  countries:
+    - identifier: "us"
+      name: "United States of America"
 menus:
   main:
     - identifier: "solutions"
