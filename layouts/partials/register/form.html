@@ -1,4 +1,5 @@
 {{ $primaryColorScheme := .Site.Params.primaryColorScheme }}
+<script src="https://www.google.com/recaptcha/enterprise.js?render={{ .Site.Params.recaptchaKey }}" async defer></script>
 <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-md px-6 lg:px-8">
   <form id="registration-form" class="space-y-6" action="#" method="POST">
     <div
@@ -222,3 +223,65 @@
     </a>
   </p>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/ulid@2.3.0/dist/index.umd.min.js"></script>
+<script>
+  document.getElementById('registration-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    document.getElementById('error-message').style.display = 'none';
+    document.getElementById('submit-button').disabled = true;
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    const recaptchaKey = "{{ .Site.Params.recaptchaKey }}";
+    const registerApiURL = "{{ .Site.Params.registerApiURL }}";
+    const appURL = "{{ .Site.Params.appURL }}";
+
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute(recaptchaKey, {action: 'REGISTER'});
+      const formData = {
+        id: ULID.ulid(),
+        name: document.getElementById('name').value,
+        countryCode: document.getElementById('country').value,
+        creator: {
+          firstName: document.getElementById('first-name').value,
+          lastName: document.getElementById('last-name').value,
+          emailAddress: document.getElementById('email').value,
+          password: document.getElementById('password').value
+        },
+        token: token
+      };
+
+      fetch(registerApiURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => {
+          if (response.ok) {
+            return response
+          } else {
+            throw response;
+          }
+        })
+        .then(() => {
+          document.getElementById('success-message').style.display = 'block';
+          setTimeout(function () {
+              window.location.href = appURL;
+          }, 3000);
+        })
+        .catch((error) => {
+          console.error(error)
+          document.getElementById('submit-button').disabled = false;
+          // Handle different response statuses
+          if (error.status === 400) {
+            document.getElementById('error-text').textContent = 'Invalid captcha. Please retry after refresh. If the issue persists, let us know.';
+          } else if (error.status === 409) {
+            document.getElementById('error-text').textContent = 'Looks like you are already registered. Please try to login.';
+          } else {
+            document.getElementById('error-text').textContent = 'Please retry. If the issue persists, let us know.';
+          }
+          document.getElementById('error-message').style.display = 'block';
+        });
+    });
+  });
+</script>
