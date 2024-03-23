@@ -50,6 +50,15 @@
           {{ or (T .Identifier) .Name | safeHTML }}
         </a>
       {{ end }}
+      {{ if .Site.Params.appURL }}
+        <a
+          href="{{ .Site.Params.appURL }}"
+          title="Log in"
+          class="text-sm font-semibold leading-6 text-gray-900"
+        >
+          Log in
+        </a>
+      {{ end }}
     </div>
     <div
       class="hidden lg:flex lg:flex-1 lg:justify-end border-l border-slate-200 ml-6 pl-6"

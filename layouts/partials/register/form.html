@@ -1,5 +1,9 @@
 {{ $primaryColorScheme := .Site.Params.primaryColorScheme }}
-<script src="https://www.google.com/recaptcha/enterprise.js?render={{ .Site.Params.recaptchaKey }}" async defer></script>
+<script
+  src="https://www.google.com/recaptcha/enterprise.js?render={{ .Site.Params.recaptchaKey }}"
+  async
+  defer
+></script>
 <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-md px-6 lg:px-8">
   <form id="registration-form" class="space-y-6" action="#" method="POST">
     <div

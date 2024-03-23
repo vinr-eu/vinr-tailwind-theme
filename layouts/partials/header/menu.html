@@ -57,6 +57,16 @@
               {{ or (T .Identifier) .Name | safeHTML }}
             </a>
           {{ end }}
+          {{ if .Site.Params.appURL }}
+            <a
+              href="{{ .Site.Params.appURL }}"
+              title="Log in"
+              onclick="document.querySelector('.mobile-menu').classList.toggle('hidden')"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+            >
+              Log in
+            </a>
+          {{ end }}
         </div>
       </div>
     </div>
