@@ -2,6 +2,7 @@
 <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
   <div class="-mb-6 columns-2 lg:flex lg:justify-center lg:space-x-10">
     {{ $baseURL := .Site.BaseURL }}
+    {{ $trimmedBaseURL := strings.TrimRight "/" $baseURL }}
     {{ $currentLang := .Site.Language.Lang }}
     {{ $newBaseURL := strings.TrimRight "/" $baseURL }}
     {{ if ne $currentLang "en" }}
@@ -9,13 +10,23 @@
     {{ end }}
     {{ range .Site.Menus.footer }}
       <div class="pb-6">
-        <a
-          href="{{ $newBaseURL }}{{ .PageRef }}"
-          title="{{ .Title }}"
-          class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-        >
-          {{ or (T .Identifier) .Name | safeHTML }}
-        </a>
+        {{ if .Identifier }}
+          <a
+            href="{{ $newBaseURL }}{{ .PageRef }}"
+            title="{{ .Title }}"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+          >
+            {{ or (T .Identifier) .Name | safeHTML }}
+          </a>
+        {{ else }}
+          <a
+            href="{{ $trimmedBaseURL }}{{ .PageRef }}"
+            title="{{ .Title }}"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+          >
+            {{ .Name }}
+          </a>
+        {{ end }}
       </div>
     {{ end }}
   </div>
