@@ -18,6 +18,8 @@ params:
   primaryColorScheme: "indigo"
   pricingCurrency: "US$"
   cta: "/register/"
+  alternateDomainHint: "EU? Visit"
+  alternateDomain: "www.vinr.eu"
   images:
     - logo-square.png
   social:

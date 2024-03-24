@@ -81,9 +81,17 @@
     <div>
       <label
         for="country"
-        class="block text-sm font-medium leading-6 text-gray-900"
+        class="flex items-center justify-between text-sm font-medium leading-6 text-gray-900"
       >
         {{ i18n "countryLabel" . }}
+        {{ if .Site.Params.alternateDomain }}
+          <span>
+            {{ .Site.Params.alternateDomainHint }}
+            <a href="https://{{ .Site.Params.alternateDomain }}">
+              {{ .Site.Params.alternateDomain }}
+            </a>
+          </span>
+        {{ end }}
       </label>
       <div class="mt-2">
         <select
