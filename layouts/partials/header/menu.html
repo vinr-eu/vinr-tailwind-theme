@@ -16,7 +16,6 @@
         />
       </a>
       <div class="flex gap-x-6 items-center">
-        {{ partial "header/languages.html" . }}
         <button
           type="button"
           class="menu-close -m-2.5 rounded-md p-2.5 text-gray-700"
@@ -69,6 +68,9 @@
               Log in
             </a>
           {{ end }}
+        </div>
+        <div class="py-6">
+          {{ partial "header/languages.html" . }}
         </div>
       </div>
     </div>
