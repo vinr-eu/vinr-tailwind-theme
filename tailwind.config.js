@@ -12,7 +12,7 @@ module.exports = {
 };
 
 function generateSafelist() {
-  const colors = ["indigo", "purple", "red", "sky"];
+  const colors = ["indigo", "purple", "red", "sky", "amber"];
 
   const templates = [
     { utility: "bg", shade: "500" },
