@@ -1,9 +1,30 @@
 <div class="px-6 pt-4 md:px-12 max-w-3xl mx-auto">
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <div class="text-sm leading-6 text-slate-700">
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-  </div>
+  {{ if and .Params.authorImage .Params.author }}
+    <figure>
+      <figcaption class="flex gap-x-4">
+        <img
+          class="h-12 w-12 flex-none rounded-full bg-gray-50"
+          src="{{ .Params.authorImage }}"
+          alt="{{ .Params.author }}"
+        />
+        <div class="text-sm leading-6 flex flex-col">
+          <strong class="font-semibold text-gray-900 truncate">
+            {{ .Params.author }}
+          </strong>
+          <time class="text-slate-500" datetime="{{ $dateMachine }}">
+            {{ $dateHuman }}
+          </time>
+        </div>
+      </figcaption>
+    </figure>
+  {{ else }}
+    <div class="text-sm leading-6 text-slate-700">
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    </div>
+  {{ end }}
+
 
   <div class="mt-12 prose prose-slate">
     {{ .Content }}

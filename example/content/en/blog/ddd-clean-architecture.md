@@ -6,6 +6,9 @@ tags:
   - "DDD"
   - "Architecture"
 description: "Domain Driven Design and clean architecture blog."
+params:
+  author: "Richy Kalingarayar"
+  authorImage: "https://lh3.googleusercontent.com/a/ACg8ocLlGYQ1wFe5Ig4ydfEAVdR7nLnqK92kfpI2zU03c48FmsiD=s96-c"
 ---
 
 Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.
