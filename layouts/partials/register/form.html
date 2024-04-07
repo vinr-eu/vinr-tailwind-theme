@@ -243,7 +243,12 @@
           emailAddress: document.getElementById('email').value,
           password: document.getElementById('password').value
         },
-        token: token
+        token: token,
+        utm_source: localStorage.getItem('utm_source'),
+        utm_medium: localStorage.getItem('utm_medium'),
+        utm_campaign: localStorage.getItem('utm_campaign'),
+        utm_term: localStorage.getItem('utm_term'),
+        utm_content: localStorage.getItem('utm_content')
       };
 
       fetch(registerApiURL, {
