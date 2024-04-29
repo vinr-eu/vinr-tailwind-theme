@@ -13,7 +13,11 @@
             <h2
               class="text-base font-semibold leading-7 text-{{ .Site.Params.primaryColorScheme }}-600"
             >
-              {{ i18n "features" . }}
+              {{ if .Params.features.title }}
+                {{ .Params.features.title }}
+              {{ else }}
+                {{ i18n "features" . }}
+              {{ end }}
             </h2>
             <p
               class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
