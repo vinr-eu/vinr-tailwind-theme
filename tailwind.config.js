@@ -20,9 +20,9 @@ module.exports = {
       sky: colors.sky,
       amber: colors.amber,
       vinr: {
-        50: "#e4dbf9",
-        500: "#663bb5",
-        600: "#52318a",
+        50: "#f0ebfc",
+        500: "#7b4ecf",
+        600: "#663bb5",
       },
     },
   },
