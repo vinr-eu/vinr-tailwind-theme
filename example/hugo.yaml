@@ -15,7 +15,7 @@ languages:
     languageName: "Deutsch"
     weight: 2
 params:
-  primaryColorScheme: "indigo"
+  primaryColorScheme: "vinr"
   pricingCurrency: "US$"
   cta: "/register/"
   alternateDomainHint: "EU? Visit"
