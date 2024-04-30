@@ -16,10 +16,13 @@ features:
   items:
     - title: "Business management"
       description: "You can manage your business resources, finance and assets in one place. Save money and time."
+      icon: "/images/solutions/hrm.svg"
     - title: "Startup management"
       description: "Startup is a chaotic place and before you know it things will get unmanageable. Start implementing best practices without hindering you in any way."
+      icon: "/images/solutions/fm.svg"
     - title: "Scaleup management"
       description: "Bigger your scaleup grows the more complexity and inefficiencies it will automatically collect. Put the right controls in place."
+      icon: "/images/solutions/scm.svg"
 faq:
   heading: "Frequently asked questions"
   subheading: "Can’t find the answer you’re looking for? Reach out to our customer support team."
