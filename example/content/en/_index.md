@@ -70,7 +70,7 @@ pricing:
         - name: "Business Hour Support"
     - name: "Buffet Plan"
       price: "Custom"
-      frequency: ""
+      custom: true
       description: "One monthly price, endless possibilities. Current and future tools, all included."
       ctaText: "Start trial"
       cta: "/register"
