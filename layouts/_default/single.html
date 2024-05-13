@@ -3,6 +3,7 @@
     {{ partial "doc.html" . }}
   {{ else if eq .Type "landing" }}
     {{ partial "features.html" . }}
+    {{ partial "pricing.html" . }}
     {{ partial "faq.html" . }}
   {{ else if eq .Type "about" }}
     {{ partial "about/values.html" . }}
