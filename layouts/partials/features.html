@@ -56,7 +56,11 @@
                           />
                         </svg>
                       {{ end }}
-                      {{ .title }}
+                      {{ if .href }}
+                        <a href="{{ $baseURL }}{{ .href }}">{{ .title }}</a>
+                      {{ else }}
+                        {{ .title }}
+                      {{ end }}
                     </dt>
                     <dd class="mt-2">{{ .description }}</dd>
                   </div>

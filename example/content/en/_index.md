@@ -17,6 +17,7 @@ features:
     - title: "Business management"
       description: "You can manage your business resources, finance and assets in one place. Save money and time."
       icon: "/images/solutions/hrm.svg"
+      href: "landing/super-feature/"
     - title: "Startup management"
       description: "Startup is a chaotic place and before you know it things will get unmanageable. Start implementing best practices without hindering you in any way."
       icon: "/images/solutions/fm.svg"
