@@ -42,6 +42,50 @@
             >
               {{ .Title }}
             </a>
+            <div class="lg:hidden">
+              {{ with .Parent }}
+                <div class="relative ml-2">
+                  <button
+                    id="docs-menu-button"
+                    type="button"
+                    class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Open docs menu</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="docs-menu"
+                    class="absolute left-1/2 z-10 mt-2 hidden w-screen max-w-min -translate-x-1/2 px-4"
+                  >
+                    <div
+                      class="w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 text-gray-900 shadow-lg ring-1 ring-gray-900/5"
+                    >
+                      {{ range .Pages }}
+                        <a
+                          href="{{ .RelPermalink }}"
+                          class="block p-2 hover:text-indigo-600"
+                          >{{ .Title }}</a
+                        >
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
           </div>
         </li>
       </ol>
@@ -53,3 +97,11 @@
     </h1>
   </div>
 </div>
+<script>
+  document
+    .getElementById("docs-menu-button")
+    .addEventListener("click", function () {
+      const menu = document.getElementById("docs-menu");
+      menu.classList.toggle("hidden");
+    });
+</script>
