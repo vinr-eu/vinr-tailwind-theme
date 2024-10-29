@@ -3,11 +3,7 @@
 <meta name="description" content="{{ .Description }}" />
 {{ template "_internal/opengraph.html" . }}
 <title>
-  {{ if .IsHome }}
-    {{ site.Title }}
-  {{ else }}
-    {{ printf "%s | %s" .Title site.Title }}
-  {{ end }}
+  {{ printf "%s | %s" .Title site.Title }}
 </title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
