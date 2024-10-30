@@ -40,7 +40,7 @@
   </select>
   <div>
     {{ range .Site.Languages }}
-      <a href="{{ $baseURL }}{{ .Lang }}" class="sr-only">
+      <a href="{{ $baseURL }}{{ .Lang }}/" class="sr-only">
         {{ .LanguageName }}
       </a>
     {{ end }}
