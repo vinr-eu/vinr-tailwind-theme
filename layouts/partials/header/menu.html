@@ -6,7 +6,7 @@
     <div class="flex items-center justify-between">
       {{ $baseURL := .Site.BaseURL }}
       {{ if ne .Site.Language.Lang "en" }}
-        {{ $baseURL = print .Site.BaseURL .Site.Language.Lang }}
+        {{ $baseURL = print .Site.BaseURL .Site.Language.Lang "/" }}
       {{ end }}
       <a href="{{ $baseURL }}" class="-m-1.5 p-1.5">
         <img
