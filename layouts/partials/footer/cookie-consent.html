@@ -38,45 +38,54 @@
     </div>
   </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const googleAnalyticsId = "{{ site.Config.Services.GoogleAnalytics.ID }}";
-        const consentPopup = document.getElementById('consent-popup');
-        const consentButton = document.getElementById('consent-button');
+  document.addEventListener('DOMContentLoaded', function () {
+    const googleAnalyticsId = "{{ site.Config.Services.GoogleAnalytics.ID }}";
+    const consentPopup = document.getElementById('consent-popup');
+    const consentButton = document.getElementById('consent-button');
 
-        function getCookie(name) {
-            const value = "; " + document.cookie;
-            const parts = value.split("; " + name + "=");
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
+    function getCookie(name) {
+      const value = "; " + document.cookie;
+      const parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
+    }
 
-        if (!getCookie('userConsent')) {
-            consentPopup.style.display = 'block';
-            consentButton.addEventListener('click', function () {
-                consentPopup.style.display = 'none';
-                document.cookie = "userConsent=true; path=/";
-                loadGoogleAnalytics();
-            });
-        } else {
-            loadGoogleAnalytics();
-        }
+    // Function to get the root domain dynamically
+    function getRootDomain() {
+      const hostnameParts = window.location.hostname.split('.');
+      if (hostnameParts.length > 2) {
+        return '.' + hostnameParts.slice(-2).join('.');
+      }
+      return '.' + window.location.hostname;
+    }
 
-        function loadGoogleAnalytics() {
-            window.dataLayer = window.dataLayer || [];
+    if (!getCookie('userConsent')) {
+      consentPopup.style.display = 'block';
+      consentButton.addEventListener('click', function () {
+        consentPopup.style.display = 'none';
+        document.cookie = "userConsent=true; domain=" + getRootDomain() + "; path=/";
+        loadGoogleAnalytics();
+      });
+    } else {
+      loadGoogleAnalytics();
+    }
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+    function loadGoogleAnalytics() {
+      window.dataLayer = window.dataLayer || [];
 
-            gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-            // Configure and load the Google Analytics script
-            gtag('config', googleAnalyticsId);
+      gtag('js', new Date());
 
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleAnalyticsId;
-            document.head.appendChild(script);
-        }
-    });
+      // Configure and load the Google Analytics script
+      gtag('config', googleAnalyticsId);
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleAnalyticsId;
+      document.head.appendChild(script);
+    }
+  });
 </script>
 {{ end }}
