@@ -53,7 +53,10 @@
       ? '.' + hostnameParts.slice(-2).join('.')
       : '.' + window.location.hostname;
 
-    document.cookie = "language=" + language + "; domain=" + rootDomain + "; path=/";
+    const userConsent = getCookie('userConsent')
+    if (userConsent && userConsent === "true") {
+      document.cookie = "language=" + language + "; domain=" + rootDomain + "; path=/";
+    }
   }
 
   // On page load, set the cookie with the current language

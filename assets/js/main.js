@@ -1,3 +1,9 @@
+function getCookie(name) {
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
 function toggleMenu() {
   // Select the menu toggle button and the menu container
   const menuOpen = document.querySelector(".menu-open");
