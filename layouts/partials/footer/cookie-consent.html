@@ -58,17 +58,14 @@
       return '.' + window.location.hostname;
     }
 
-    const rootDomain = getRootDomain();
     if (!getCookie('userConsent')) {
       consentPopup.style.display = 'block';
       consentButton.addEventListener('click', function () {
         consentPopup.style.display = 'none';
-        document.cookie = "userConsent=true; domain=" + rootDomain + "; path=/";
+        document.cookie = "userConsent=true; domain=" + getRootDomain() + "; path=/";
         loadGoogleAnalytics();
       });
     } else {
-      const currentLang = "{{ .Site.Language.Lang }}";
-      document.cookie = "language=" + currentLang + "; domain=" + rootDomain + "; path=/";
       loadGoogleAnalytics();
     }
 

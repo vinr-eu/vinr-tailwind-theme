@@ -47,31 +47,6 @@
   </div>
 </div>
 <script>
-  function setLanguageCookie(language) {
-    const hostnameParts = window.location.hostname.split('.');
-    const rootDomain = hostnameParts.length > 2
-      ? '.' + hostnameParts.slice(-2).join('.')
-      : '.' + window.location.hostname;
-
-    function getCookie(name) {
-      const value = "; " + document.cookie;
-      const parts = value.split("; " + name + "=");
-      if (parts.length === 2) return parts.pop().split(";").shift();
-    }
-
-    const userConsent = getCookie('userConsent')
-    if (userConsent && userConsent === "true") {
-      document.cookie = "language=" + language + "; domain=" + rootDomain + "; path=/";
-    }
-  }
-
-  // On page load, set the cookie with the current language
-  window.addEventListener('load', () => {
-    const currentLang = "{{ .Site.Language.Lang }}"; // Get the initial language from the site data
-    setLanguageCookie(currentLang);
-  });
-
-  // Function to handle language change
   function changeLanguage(select) {
     const selectedLang = select.value;
     const currentLang = "{{ .Site.Language.Lang }}";
@@ -88,7 +63,6 @@
 
     // Redirect only if the selected language is different from the current one
     if (selectedLang !== currentLang) {
-      setLanguageCookie(selectedLang);
       window.location.href = newURL;
     }
   }
