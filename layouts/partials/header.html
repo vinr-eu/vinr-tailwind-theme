@@ -5,8 +5,6 @@
   {{ partial "header/feature.html" . }}
 {{ else if eq .Type "register" }}
   {{ partial "header/register.html" . }}
-{{ else if eq .Type "story" }}
-  {{ partial "header/story.html" . }}
 {{ else if .IsPage }}
   {{ if eq .Type "blog" }}
     {{ partial "header/post.html" . }}
